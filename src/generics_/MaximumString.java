@@ -2,9 +2,9 @@ package generics_;
 
 import java.util.Scanner;
 
-public class MaximumNumber<T extends Comparable<T>> {
+public class MaximumString<T extends Comparable<T>> {
 
-	T a, b, c;
+	String a, b, c;
 
 	/**
 	 * Constructor.
@@ -13,15 +13,15 @@ public class MaximumNumber<T extends Comparable<T>> {
 	 * @param b
 	 * @param c
 	 */
-	public MaximumNumber(T a, T b, T c) {
+	public MaximumString(String a, String b, String c) {
 
 		this.a = a;
 		this.b = b;
 		this.c = c;
 	}
 
-	public T maximum() {
-		return MaximumNumber.maximum(a, b, c);
+	public String maximum() {
+		return MaximumString.maximum(a, b, c);
 	}
 
 	/**
@@ -33,7 +33,7 @@ public class MaximumNumber<T extends Comparable<T>> {
 	 * @param c
 	 * @param max
 	 */
-	public static <T> void printMax(T a, T b, T c, T max) {
+	public static <T> void printMaximum(T a, T b, T c, T max) {
 		System.out.printf("max of %s, %s and %s is %s\n", a, b, c, max);
 
 	}
@@ -47,20 +47,20 @@ public class MaximumNumber<T extends Comparable<T>> {
 	 * @param c
 	 * @return
 	 */
-	public static <T extends Comparable<T>> T maximum(T a, T b, T c) {
-		T max = a;
+	public static <T extends Comparable<T>> String maximum(String a, String b, String c) {
+		String max = a;
 		if (b.compareTo(max) > 0) {
 			max = b;
 		}
 		if (c.compareTo(max) > 0) {
 			max = c;
 		}
-		printMax(a, b, c, max);
+		printMaximum(a, b, c, max);
 		return max;
 	}
 
 	/**
-	 * This method is created for finding the maximum number.
+	 * This method is created for finding the maximum string.
 	 * 
 	 * @param args
 	 */
@@ -68,13 +68,13 @@ public class MaximumNumber<T extends Comparable<T>> {
 		Scanner cs = new Scanner(System.in);
 		// TODO Auto-generated method stub
 		System.out.println("Enter value of a:");
-		Float aFloat = cs.nextFloat();
+		String aString = cs.nextLine();
 		System.out.println("Enter value of b:");
-		Float bFloat = cs.nextFloat();
+		String bString = cs.nextLine();
 		System.out.println("Enter value of c:");
-		Float cFloat = cs.nextFloat();
+		String cString = cs.nextLine();
 
-		new MaximumNumber(aFloat, bFloat, cFloat).maximum();
+		new MaximumString(aString, bString, cString).maximum();
 		cs.close();
 	}
 
