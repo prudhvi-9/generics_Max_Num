@@ -68,13 +68,13 @@ public class MaximumNumber<T extends Comparable<T>> {
 		Scanner cs = new Scanner(System.in);
 		// TODO Auto-generated method stub
 		System.out.println("Enter value of a:");
-		Integer aInt = cs.nextInt();
+		Float aFloat = cs.nextFloat();
 		System.out.println("Enter value of b:");
-		Integer bInt = cs.nextInt();
+		Float bFloat = cs.nextFloat();
 		System.out.println("Enter value of c:");
-		Integer cInt = cs.nextInt();
+		Float cFloat = cs.nextFloat();
 
-		new MaximumNumber(aInt, bInt, cInt).maximum();
+		new MaximumNumber(aFloat, bFloat, cFloat).maximum();
 		cs.close();
 	}
 
