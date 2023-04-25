@@ -102,7 +102,7 @@ class MyPack<T> {
  *
  * @param <T>
  */
-public class MoreThanThree<T extends Comparable<T>> {
+public class ToPrintMax<T extends Comparable<T>> {
 
 	T a, b, c, d, e, f;
 
@@ -114,7 +114,7 @@ public class MoreThanThree<T extends Comparable<T>> {
 	 * @param c
 	 * @return
 	 */
-	public MoreThanThree(T a, T b, T c, T d, T e, T f) {
+	public ToPrintMax(T a, T b, T c, T d, T e, T f) {
 
 		this.a = a;
 		this.b = b;
@@ -126,7 +126,7 @@ public class MoreThanThree<T extends Comparable<T>> {
 	}
 
 	public T maximum() {
-		return MoreThanThree.maximum(a, b, c, d, e, f);
+		return ToPrintMax.maximum(a, b, c, d, e, f);
 	}
 
 	/**
@@ -261,9 +261,9 @@ public class MoreThanThree<T extends Comparable<T>> {
 		System.out.println("----------------------------------------");
 		m.add(pIn, qIn, rIn, sIn, tIn, vIn);
 
-		MoreThanThree.testingmaximum(aStri, bStri, cStri, dStri, eStri, fStri);
-		new MoreThanThree(aIn, bIn, cIn, dIn, eIn, fIn).maximum();
-		new MoreThanThree(aFl, bFl, cFl, dFl, eFl, fFl).maximum();
+		ToPrintMax.testingmaximum(aStri, bStri, cStri, dStri, eStri, fStri);
+		new ToPrintMax(aIn, bIn, cIn, dIn, eIn, fIn).maximum();
+		new ToPrintMax(aFl, bFl, cFl, dFl, eFl, fFl).maximum();
 		MyPack.testermaximum(m.p, m.q, m.r, m.s, m.t, m.v);
 		cs.close();
 
